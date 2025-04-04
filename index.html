@@ -1,111 +1,147 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>PULA.GAY - The Gayest Place in Croatia!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Look ma, no real CSS file! -->
     <style>
         body {
-            background-color: #ff00ff;
-            color: #00ffff;
-            font-family: "Comic Sans MS", cursive;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
+            font-family: "Times New Roman", Times, serif; /* Classic */
+            background-color: #C0C0C0; /* System Grey */
+            color: #000000;
+            margin: 20px;
+            background-image: url('tile_bg.gif'); /* Optional: Add a hideous tiled background */
+            background-repeat: repeat;
+        }
+        .container {
+            max-width: 600px; /* Limit width like old monitors */
+            margin: 10px auto;
+            padding: 15px;
+            border: 3px double #000080; /* Navy blue double border */
+            background-color: #FFFFFF; /* White content box */
+            box-shadow: 5px 5px 5px #888888; /* Cheesy shadow */
         }
         h1 {
-            font-size: 48px;
-            color: #ffff00;
-            text-shadow: 2px 2px #ff0000;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Goofy Header Font */
+            color: #FF0000; /* Bright Red */
+            text-align: center;
+            text-shadow: 2px 2px #0000FF; /* Blue shadow - yikes */
+            letter-spacing: 3px;
         }
         h2 {
-            color: #00ff00;
-            font-size: 32px;
+            font-family: "Comic Sans MS", cursive, sans-serif; /* Mandatory bad font */
+            color: #008000; /* Dark Green */
+            border-bottom: 2px dashed #FFA500; /* Orange dashed line */
         }
         p {
-            font-size: 20px;
+            line-height: 1.4;
+            font-size: 16px; /* Readable, at least */
         }
-        .blink {
-            animation: blink 1s infinite;
+        a {
+            color: #0000FF; /* Standard Blue */
+            text-decoration: underline;
         }
+        a:visited {
+            color: #800080; /* Standard Purple */
+        }
+        hr {
+            border: none;
+            height: 5px;
+            /* Creates a "rainbow" effect */
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        }
+        .center {
+            text-align: center;
+        }
+        .small-text {
+            font-size: 12px;
+            color: #555555;
+        }
+        /* Blinking text - the ultimate annoyance */
         @keyframes blink {
             50% { opacity: 0; }
         }
-        .rainbow {
-            background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-        table {
-            margin: 20px auto;
-            border: 5px solid #ff0000;
-            background-color: #000000;
-        }
-        td {
-            padding: 10px;
-            color: #ffffff;
-        }
-        a {
-            color: #ffff00;
-            text-decoration: underline;
-        }
-        a:hover {
-            color: #ff00ff;
+        .blink {
+            animation: blink 1s linear infinite;
+            color: #FF00FF; /* Magenta */
+            font-weight: bold;
         }
     </style>
+    <title>Welcome to PULA.GAY - The Future is Here!</title>
 </head>
 <body>
-    <!-- MIDI Background Music (oldschool vibes) -->
-    <embed src="http://www.midishrine.com/midi/abba-dancingqueen.mid" autostart="true" loop="true" hidden="true">
 
-    <!-- Header with spinning GIF -->
-    <h1 class="rainbow">WELCOME TO PULA.GAY</h1>
-    <img src="https://web.archive.org/web/20091027094306/http://geocities.com/spunk1111/dance4.gif" alt="Dancing Baby" width="100">
-    <p><b><i><span class="blink">The Gayest Place in Croatia!</span></i></b></p>
+    <div class="container">
 
-    <!-- Main Content -->
-    <h2>Where the Pula Party Never Stops!</h2>
-    <p>Tired of boring vacations? Come to <b>Pula.Gay</b>, the unofficial, totally fabulous capital of gay Croatia!<br>
-    We’ve got Roman ruins, stunning beaches, and more sequins than you can shake a glitter stick at!</p>
+        <!-- Hideous Banner maybe? -->
+        <div class="center">
+             <img src="https://www.animatedimages.org/data/media/43/animated-welcome-image-0034.gif" alt="Flashing Welcome Sign">
+             <!-- Replace with a terribly made custom banner if you can -->
+        </div>
 
-    <!-- Sections -->
-    <table width="80%">
-        <tr>
-            <td>
-                <h2>Pula Pride Parade</h2>
-                <p>Every day is a parade here! Strut past the ancient Arena—<br>because gladiators were *totally* gay icons!</p>
-            </td>
-            <td>
-                <img src="https://web.archive.org/web/20091027093947/http://geocities.com/clipart/pbi/discoball.gif" alt="Disco Ball" width="80">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h2>Beach Fab-ulous</h2>
-                <p>Our beaches are so hot, even the Adriatic blushes.<br>Grab your rainbow towel and werk it!</p>
-            </td>
-            <td>
-                <img src="https://web.archive.org/web/20091027094003/http://geocities.com/clipart/pbi/rainbow.gif" alt="Rainbow" width="80">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h2>Nightlife Extravaganza</h2>
-                <p>Dance at <i>Club Glitterix</i>—Pula’s imaginary disco with ABBA remixes and tiny umbrellas!</p>
-            </td>
-            <td>
-                <img src="https://web.archive.org/web/20091027094306/http://geocities.com/spunk1111/starspin.gif" alt="Spinning Star" width="80">
-            </td>
-        </tr>
-    </table>
+        <h1>P.U.L.A. G.A.Y. Initiative</h1>
 
-    <!-- Fake Testimonials -->
-    <h2>What Our Visitors Say!</h2>
-    <p><marquee behavior="scroll" direction="left">"I came for the arches, stayed for the rainbow marches!" - Ivan, Zagreb</marquee></p>
-    <p><marquee behavior="scroll" direction="right">"Pula.Gay turned my vacation into a *vogue-cation*!" - Dragana, Split</marquee></p>
+        <hr>
 
-    <!-- Footer -->
-    <p><small><i>Disclaimer: Pula.Gay is not real (yet). Visit the real Pula and make it gay yourself!<br>
-    <a href="mailto:pula.gay@fakeemail.com">Email Us!</a></i></small></p>
+        <h2>What is P.U.L.A.?</h2>
+        <p>
+            Welcome to the digital nexus of the <strong>P</strong>rogressive <strong>U</strong>niversal <strong>L</strong>everage <strong>A</strong>lliance! We are a forward-thinking collective dedicated to... well, <em>things</em>. Important things! Our members work <em>hard</em>, often standing <em>firm</em> in their beliefs, to push the boundaries of digital synergy.
+        </p>
+        <p>
+            Here at P.U.L.A., we believe in providing robust solutions and fostering growth. Our platform is built on a solid foundation, aiming for maximum penetration into the global consciousness.
+        </p>
 
-    <!-- Hit Counter (oldschool must-have) -->
-    <p><img src="https://web.archive.org/web/20091027094306/http://geocities.com/spunk1111/counter.gif" alt="Hit Counter"> Visitors since 1999!</p>
+        <!-- Spinning GIF of some sort -->
+        <div class="center">
+            <img src="https://www.animatedimages.org/data/media/111/animated-globe-image-0094.gif" alt="Spinning Globe" width="50">
+            <img src="https://www.animatedimages.org/data/media/16/animated-email-image-0018.gif" alt="Spinning Email" width="50"> <!-- Why not two? -->
+        </div>
+
+        <h2>Our G.A.Y. Mandate</h2>
+        <p>
+            The G.A.Y. aspect (<strong>G</strong>lobal <strong>A</strong>rtistic <strong>Y</strong>earning) ensures our initiatives remain vibrant, colorful, and expressive. We embrace the full spectrum of possibilities! Join us as we explore new dimensions of... interaction.
+        </p>
+        <ul>
+            <li>Synergistic Paradigms</li>
+            <li>Leveraged Interactions (Very Important!)</li>
+            <li>Holistic Digital Experiences</li>
+            <li><a href="#">Broken Link Example</a></li>
+            <li><span class="blink">** SPECIAL ANNOUNCEMENT COMING SOON **</span></li>
+        </ul>
+
+        <hr>
+
+        <h2>Get Involved!</h2>
+        <p>
+            Want to feel the P.U.L.A. energy? It's easy! Just... uh... check back often! We are constantly erecting new features. Maybe sign our <a href="guestbook.html">Guestbook</a>? (Note: Guestbook currently under construction... forever).
+        </p>
+
+        <!-- Under Construction GIF -->
+        <div class="center">
+            <img src="https://www.animatedimages.org/data/media/116/animated-under-construction-image-0018.gif" alt="Under Construction">
+        </div>
+
+        <hr>
+
+        <!-- Visitor Counter -->
+        <div class="center">
+            <p class="small-text">You are visitor number:</p>
+            <img src="https://www.animatedimages.org/data/media/115/animated-counter-image-0019.gif" alt="Cheesy Visitor Counter">
+            <p class="small-text">(Counter may be inaccurate... or completely fake)</p>
+        </div>
+
+        <!-- Footer -->
+        <p class="center small-text">
+            Best viewed with Netscape Navigator 3.0 or Internet Explorer 4.0<br>
+            Resolution: 800x600 recommended<br>
+            Last Updated: June 1st, 1997 <br>
+            © 1997-1999 PULA.GAY International. All Rights Reserved? Maybe.
+        </p>
+
+        <!-- Optional: Annoying background music (MIDI) - Use with caution! -->
+        <!-- <embed src="annoying_midi.mid" autostart="true" loop="true" hidden="true"> -->
+
+    </div> <!-- End Container -->
+
 </body>
 </html>
