@@ -5,144 +5,296 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: "Times New Roman", Times, serif;
-            background-color: #C0C0C0; /* System Grey */
-            color: #000000;
-            margin: 20px;
-            /* Found a nice Geocities-esque tiled background */
-            background-image: url('https://cyber.dabamos.de/88x31/backgrounds/backgrounds_neon/cybertri.gif');
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            /* Rotating background colors! Requires animation. */
+            animation: insaneBackground 10s linear infinite;
+            color: #FFFF00; /* Bright Yellow Text */
+            margin: 10px;
+            /* Let's layer a tiled GIF over the animated background! */
+            background-image: url('https://cyber.dabamos.de/88x31/backgrounds/backgrounds_textures/marblevy.gif'); /* Subtle marble texture */
             background-repeat: repeat;
+            overflow-x: hidden; /* Prevent horizontal scrollbar from excessive marquees */
         }
+         /* Animated Background Color */
+        @keyframes insaneBackground {
+             0% { background-color: #FF0000; } /* Red */
+            25% { background-color: #00FF00; } /* Lime */
+            50% { background-color: #0000FF; } /* Blue */
+            75% { background-color: #FF00FF; } /* Magenta */
+           100% { background-color: #FF0000; } /* Back to Red */
+        }
+
         .container {
-            max-width: 600px;
-            margin: 10px auto;
-            padding: 15px;
-            border: 3px double #000080; /* Navy blue double border */
-            background-color: #FFFFFF; /* White content box */
-            box-shadow: 5px 5px 5px #888888; /* Cheesy shadow */
+            max-width: 750px; /* Even wider */
+            margin: 5px auto; /* Less margin */
+            padding: 10px;
+            border: 10px groove #00FFFF; /* Thick Cyan Groove Border */
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black box to see background */
+            box-shadow: 10px 10px 15px #FFFF00, -10px -10px 15px #00FF00; /* Dual color shadow */
         }
         h1 {
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            color: #FF0000; /* Bright Red */
+            color: #FFFFFF; /* White */
             text-align: center;
-            text-shadow: 2px 2px #0000FF; /* Blue shadow - yikes */
-            letter-spacing: 3px;
+            animation: rainbowShadowPulse 1.5s linear infinite; /* Faster, Pulsing shadow */
+            letter-spacing: 5px;
+            font-size: 55px; /* EVEN BIGGER */
+            border: 5px dashed #FFFF00; /* Yellow dashed border around H1 */
+            padding: 5px;
+            background-color: #FF00FF; /* Magenta background for H1 */
         }
+         /* Animated Rainbow Text Shadow with Pulse */
+        @keyframes rainbowShadowPulse {
+             0% { text-shadow: 4px 4px #00FF00, 0 0 5px #FFF; } /* Lime + White Glow */
+            25% { text-shadow: 4px 4px #0000FF, 0 0 10px #FFF; } /* Blue + Bigger Glow */
+            50% { text-shadow: 4px 4px #FF0000, 0 0 15px #FFF; } /* Red + Biggest Glow */
+            75% { text-shadow: 4px 4px #FFFF00, 0 0 10px #FFF; } /* Yellow + Bigger Glow */
+           100% { text-shadow: 4px 4px #00FF00, 0 0 5px #FFF; } /* Back to Lime + White Glow */
+        }
+
         h2 {
-            font-family: "Comic Sans MS", cursive, sans-serif;
-            color: #008000; /* Dark Green */
-            border-bottom: 2px dashed #FFA500; /* Orange dashed line */
+            font-family: "Courier New", Courier, monospace; /* Monospace font for contrast */
+            color: #00FF00; /* Lime Green Headings */
+            border: 4px dotted #FF00FF; /* Magenta dotted border */
+            text-align: center;
+            padding: 8px;
+            background-color: #000080; /* Navy background for H2 */
+            font-size: 28px;
+            /* Add skew effect */
+            transform: skewX(-10deg);
         }
         p {
-            line-height: 1.4;
-            font-size: 16px;
+            line-height: 1.6;
+            font-size: 20px; /* Larger text */
+            color: #FFFFFF; /* White paragraph text */
+            text-shadow: 1px 1px 2px #000000; /* Subtle black shadow for readability */
         }
         a {
-            color: #0000FF; /* Standard Blue */
+            color: #00FFFF; /* Cyan Links */
             text-decoration: underline;
+            font-weight: bold;
+            animation: linkWiggle 0.5s linear infinite; /* Make links wiggle */
+            display: inline-block; /* Needed for transform */
         }
+         @keyframes linkWiggle {
+              0% { transform: rotate(0deg); }
+             25% { transform: rotate(-3deg); }
+             50% { transform: rotate(0deg); }
+             75% { transform: rotate(3deg); }
+            100% { transform: rotate(0deg); }
+         }
         a:visited {
-            color: #800080; /* Standard Purple */
+            color: #FF6347; /* Tomato Red Visited Links */
         }
-        hr {
-            border: none;
-            height: 5px;
-            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        .flaming-hr {
+            display: block;
+            margin: 10px auto;
+            width: 100%; /* Full width flames */
         }
         .center {
             text-align: center;
         }
         .small-text {
-            font-size: 12px;
-            color: #555555;
+            font-size: 16px;
+            color: #CCCCCC;
         }
         @keyframes blink {
             50% { opacity: 0; }
         }
         .blink {
-            animation: blink 1s linear infinite;
-            color: #FF00FF; /* Magenta */
+            animation: blink 0.5s step-start infinite; /* Even FASTER blink */
             font-weight: bold;
+            font-size: 24px; /* Bigger Blink Text */
         }
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+        .spinner {
+            display: inline-block;
+            animation: spin 1.5s linear infinite; /* Faster Spin */
+        }
+        /* Vortulon Specific Style */
+        .vortulon-link {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFD700; /* Gold */
+            background-color: #8B0000; /* Dark Red background */
+            padding: 5px 10px;
+            border: 3px outset #C0C0C0; /* Silver outset border */
+            text-decoration: none; /* Remove default underline */
+            animation: vortulonPulse 1s infinite;
+            display: inline-block; /* Needed for padding/border */
+        }
+        @keyframes vortulonPulse {
+            0% { transform: scale(1); box-shadow: 0 0 5px #FFF;}
+            50% { transform: scale(1.1); box-shadow: 0 0 15px #FFF;}
+            100% { transform: scale(1); box-shadow: 0 0 5px #FFF;}
+        }
+        /* Fake Error Box */
+        .fake-error {
+            border: 2px outset #C0C0C0;
+            background-color: #E0E0E0;
+            color: #000;
+            padding: 15px;
+            margin: 20px auto;
+            width: 80%;
+            font-family: "MS Sans Serif", "Geneva", sans-serif; /* System font */
+            font-size: 14px;
+        }
+        .error-title {
+            background-color: #000080; /* Navy title bar */
+            color: #FFF;
+            padding: 3px 5px;
+            font-weight: bold;
+            margin: -15px -15px 10px -15px; /* Position like title bar */
+        }
+        .error-icon {
+            float: left;
+            margin-right: 10px;
+            font-size: 24px; /* Make icon bigger */
+            color: #FF0000; /* Red icon */
+        }
+
     </style>
-    <title>Welcome to PULA.GAY - The Future is Now(ish)!</title>
+    <meta name="keywords" content="pula, gay, vortulon, made by vortulon, geocities, netscape, midi, under construction, synergy, robust, hard, firm, penetrate, pulsating, action, web 1.0, chaos, obnoxious, migraine, eyestrain">
+    <title>!!!1! PULA.GAY - MAXIMUM VORTULON HYPER-CHAOS !!!1!</title>
 </head>
 <body>
 
+    <!-- Marquee Madness -->
+    <marquee behavior="scroll" direction="left" scrollamount="10" style="background-color: yellow; color: red; font-size: 20px; font-weight: bold; border: 2px solid black;">
+        WELCOME TO THE MOST ADVANCED SITE ON THE WEB!!! PULA.GAY IS #1 !!! SITE CREATED BY THE LEGENDARY VORTULON (vortulon.xyz) !!! CLICK ALL THE THINGS !!! WARNING: MAY CAUSE SEIZURES !!!
+    </marquee>
+
     <div class="container">
 
-        <!-- Flashing Welcome GIF -->
+        <!-- Multiple Welcome GIFs + Other Junk -->
         <div class="center">
              <img src="https://www.animatedimages.org/data/media/43/animated-welcome-image-0034.gif" alt="Flashing Welcome Sign">
+             <img src="https://www.animatedimages.org/data/media/111/animated-globe-image-0056.gif" alt="Spinning Globe" class="spinner" width="50">
+             <img src="https://www.animatedimages.org/data/media/43/animated-welcome-image-0018.gif" alt="Another Welcome">
         </div>
 
-        <h1>P.U.L.A. G.A.Y. Collective</h1>
+        <h1>
+             <img src="https://www.animatedimages.org/data/media/147/animated-explosion-image-0012.gif" alt="Boom!" width="60">
+             P.U.L.A. G.A.Y. Collective
+             <img src="https://www.animatedimages.org/data/media/147/animated-explosion-image-0012.gif" alt="Boom!" width="60">
+        </h1>
 
-        <hr>
+        <!-- Flaming Divider -->
+        <img src="https://www.animatedimages.org/data/media/113/animated-line-image-0207.gif" class="flaming-hr" alt="---">
 
-        <h2>Our Noble Mission?</h2>
-        <p>
-            You've arrived at the prime digital real estate for the <strong>P</strong>ioneering <strong>U</strong>nit for <strong>L</strong>everaged <strong>A</strong>scension! We are a dynamic group focused on... stuff. Really groundbreaking stuff! Our associates are known for their *stiff* resolve and ability to penetrate new markets.
-        </p>
-        <p>
-            At P.U.L.A., we provide robust frameworks and ensure everything stands up to scrutiny. We're aiming for deep engagement across the G.A.Y. spectrum.
-        </p>
+        <!-- Vortulon Attribution - Top -->
+        <div class="center" style="margin-bottom: 15px;">
+            <span style="font-size: 18px; color: white; background: black; padding: 3px;">A Masterpiece Crafted By:</span><br>
+            <a href="http://vortulon.xyz" target="_blank" class="vortulon-link">VORTULON</a> <span class="blink" style="color: #FFFF00;">(CLICK ME!)</span>
+        </div>
 
-        <!-- Spinning Globe and Email GIFs -->
+        <!-- Dancing Baby + Others -->
         <div class="center">
-            <img src="https://www.animatedimages.org/data/media/111/animated-globe-image-0094.gif" alt="Spinning Globe" width="50">
-            <img src="https://www.animatedimages.org/data/media/16/animated-email-image-0018.gif" alt="Spinning Email" width="50">
-             <img src="https://www.animatedimages.org/data/media/111/animated-globe-image-0094.gif" alt="Another Spinning Globe" width="50"> <!-- Why not three? -->
+            <img src="https://www.animatedimages.org/data/media/6/animated-baby-image-0091.gif" alt="Dancing Baby!">
+            <img src="https://www.animatedimages.org/data/media/121/animated-monkey-image-0086.gif" alt="Dancing Monkey!" width="80"> <!-- Added Monkey -->
         </div>
 
-        <h2>The G.A.Y. Principle</h2>
+        <h2>Our <span class="blink" style="color:red;">!!ULTRA-HARDCORE!!</span> Mission!</h2>
         <p>
-            G.A.Y. stands for <strong>G</strong>lobal <strong>A</strong>dvancement, <strong>Y</strong>'all! It's our commitment to being... out there. We champion vibrant expression and explore every hole... uh, *whole* new opportunity for interaction.
+            <img src="https://www.animatedimages.org/data/media/147/animated-explosion-image-0006.gif" alt="Boom!" width="40" style="float:left; margin-right: 5px;" class="spinner">
+            You've slammed your modem into the pulsating heart of <strong>P</strong>erpetually <strong>U</strong>nder-estimated <strong>L</strong>everage <strong>A</strong>ctivators! We're the cyber-gods, smashing paradigms with our FIRM GRASP on technology! We provide ROBUST back-ends and PENETRATE markets like nobody's business! This ain't your grandma's webpage, unless your grandma is AWESOME and likes G.A.Y. stuff!
+        </p>
+
+        <!-- Fake Error Box -->
+        <div class="fake-error">
+            <div class="error-title">Synergy Error</div>
+            <span class="error-icon">X</span> Critical Failure in Paradigm Matrix! Re-synergizing leveraged assets is recommended. [ <a href="#" onclick="alert('Re-synergizing failed! Error: Too much PULA!'); return false;">OK</a> ]
+        </div>
+
+        <!-- GIF Cluster FROM HELL -->
+        <div class="center">
+            <img src="https://www.animatedimages.org/data/media/111/animated-globe-image-0094.gif" alt="Spinning Globe" width="70" class="spinner">
+            <img src="https://www.animatedimages.org/data/media/16/animated-email-image-0018.gif" alt="Spinning Email" width="70" style="animation: spin 1s linear infinite reverse;"> <!-- Reverse Spin -->
+            <img src="https://www.animatedimages.org/data/media/146/animated-star-image-0010.gif" alt="Spinning Star" width="70" class="spinner">
+            <img src="https://www.animatedimages.org/data/media/111/animated-globe-image-0056.gif" alt="Another Spinning Globe" width="70" class="spinner">
+            <img src="https://www.animatedimages.org/data/media/121/animated-monkey-image-0072.gif" alt="Crazy Monkey" width="70">
+            <img src="https://www.animatedimages.org/data/media/147/animated-explosion-image-0019.gif" alt="Boom" width="70">
+        </div>
+
+        <h2>The <i style="color:#FF1493;">G.A.Y.</i> (Groovy Awesome Yearning!) Principle!</h2>
+        <p>
+             G.A.Y. is about MAXIMUM OVERLOAD! Feel the RAINBOW! Explore every nook and cranny... of the digital frontier! We are LOUD, PROUD, and POORLY CODED! Join the <strong class="blink" style="color:#00FFFF;">REVOLUTION!</strong>
         </p>
         <ul>
-            <li>Next-Gen Paradigms (Whatever those are)</li>
-            <li>Enhanced Thrust Initiatives</li>
-            <li>Synergistic Back-End Solutions</li>
-            <li><a href="#">This Link is Totally Real (Not)</a></li>
-            <li><span class="blink">** BIG NEWS DROPPING SOON! MAYBE! **</span></li>
+            <li><img src="https://www.animatedimages.org/data/media/21/animated-arrow-image-0015.gif" alt=">" width="25" class="spinner"> <span style="font-size: 22px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); -webkit-background-clip: text; color: transparent;">RAINBOW SYNERGY!</span></li>
+            <li><img src="https://www.animatedimages.org/data/media/21/animated-arrow-image-0015.gif" alt=">" width="25" class="spinner"> Unbelievable Thrust Vectors!</li>
+            <li><img src="https://www.animatedimages.org/data/media/21/animated-arrow-image-0015.gif" alt=">" width="25" class="spinner"> Pulsating Code Injection!</li>
+            <li><img src="https://www.animatedimages.org/data/media/21/animated-arrow-image-0015.gif" alt=">" width="25" class="spinner"> <a href="javascript:alert('YOU CLICKED THE BAD LINK! Ha Ha!');">DO NOT CLICK THIS LINK (Seriously!)</a></li>
+            <li><marquee behavior="alternate" scrollamount="8"><span class="blink" style="color: #FF00FF; font-size: 26px;">*** MIND BLOWING UPDATE COMING... EVENTUALLY! ***</span></marquee></li>
         </ul>
 
-        <hr>
+        <!-- Another Flaming Divider -->
+        <img src="https://www.animatedimages.org/data/media/113/animated-line-image-0207.gif" class="flaming-hr" alt="---">
 
-        <h2>Experience P.U.L.A.!</h2>
+        <h2>EXPERIENCE <blink>!!!P.U.L.A.!!!</blink></h2>
         <p>
-            Ready to join the excitement? Good luck! We're busy erecting... I mean, *building*... new things constantly. Feel free to shout into the void, or perhaps sign our state-of-the-art <a href="#">Guestbook</a> (Disclaimer: Guestbook powered by hopes and dreams, currently offline).
+            Can you handle the P.U.L.A.? Probably not! We're too busy ERECTING digital monuments to care! Our <a href="#" onclick="document.body.style.filter = 'invert(1)'; return false;">Guestbook</a> is BROKEN (Click to invert colors!). Try refreshing the page 100 times!
         </p>
 
-        <!-- Under Construction GIF -->
+        <!-- Under Construction Zone of Terror -->
         <div class="center">
             <img src="https://www.animatedimages.org/data/media/116/animated-under-construction-image-0018.gif" alt="Under Construction">
-             <img src="https://www.animatedimages.org/data/media/116/animated-under-construction-image-0018.gif" alt="Under Construction Again"> <!-- MORE! -->
+            <img src="https://www.animatedimages.org/data/media/116/animated-under-construction-image-0055.gif" alt="Under Construction Anvil" class="spinner"> <!-- Spin the Anvil -->
+            <img src="https://www.animatedimages.org/data/media/116/animated-under-construction-image-0018.gif" alt="Under Construction Again">
+            <img src="https://www.animatedimages.org/data/media/116/animated-under-construction-image-0005.gif" alt="Under Construction Worker">
         </div>
 
-        <hr>
+         <!-- And another Flaming Divider -->
+        <img src="https://www.animatedimages.org/data/media/113/animated-line-image-0207.gif" class="flaming-hr" alt="---">
 
-        <!-- Animated Fake Visitor Counter -->
+         <!-- Marquee Ad -->
+        <marquee behavior="scroll" direction="up" scrollamount="3" height="50" style="border: 3px dashed lime; background-color: black; color: white; text-align:center;">
+            Visit our sponsor! (Link broken) <br> Buy PULA-COIN! (Not real)
+        </marquee>
+
+
+        <!-- Animated Fake Visitor Counter + Badges -->
         <div class="center">
-            <p class="small-text">Site Visits:</p>
-            <!-- Found a classic "hit counter" style GIF -->
-            <img src="https://cyber.dabamos.de/88x31/webcounter.gif" alt="Fake Animated Visitor Counter">
-            <p class="small-text">(Numbers are for entertainment purposes only. Probably.)</p>
+            <p class="small-text" style="font-size: 20px; color: #FF00FF;">Users Currently Experiencing PULA.GAY:</p>
+            <img src="https://www.animatedimages.org/data/media/115/animated-counter-image-0019.gif" alt="Fake Animated Visitor Counter"> <br>
+            <p class="small-text">(Counter accuracy is inversely proportional to your sanity)</p>
+            <!-- MORE BADGES -->
+            <img src="https://cyber.dabamos.de/88x31/notepad.gif" alt="Made with Notepad!">
+            <img src="https://cyber.dabamos.de/88x31/animator.gif" alt="GIF Animator!">
+            <img src="https://cyber.dabamos.de/88x31/get_powered/netscape_now_30.gif" alt="Netscape Now!">
+            <img src="https://cyber.dabamos.de/88x31/get_powered/ie_now.gif" alt="IE Now!">
+            <img src="https://cyber.dabamos.de/88x31/best_viewed/bviewany.gif" alt="Best Viewed With Any Browser">
+            <img src="https://cyber.dabamos.de/88x31/nocookies.gif" alt="No Cookies!">
         </div>
 
         <!-- Footer -->
-        <p class="center small-text">
-            Optimized for a 14.4k Modem<br>
-            Requires Netscape Navigator GOLD or IE 3.1<br>
-            Last modified when the dinosaurs roamed.<br>
-            © 1996 PULA.GAY Intergalactic. Do not steal our amazing source code.
+        <hr style="border-top: 5px dotted red;">
+        <p class="center small-text" style="color: #00FF00; font-weight:bold; font-size: 18px;"> <!-- Lime footer -->
+            This Abomination Against Web Design Brought To You By The One And Only: <br>
+             <a href="http://vortulon.xyz" target="_blank" class="vortulon-link" style="font-size: 30px; margin-top: 10px;">V O R T U L O N</a> <br>
+            (<a href="http://vortulon.xyz" target="_blank" style="color: yellow;">vortulon.xyz</a> - ENTER IF YOU DARE!)<br>
+            Best viewed through tears. Resolution: PAIN.<br>
+            Last Updated: When the Web was YOUNG and WILD.<br>
+            © Ancient Times - PULA.GAY / VORTULON INDUSTRIES. No Rights Reserved. Steal Everything.
         </p>
-
-        <!-- Optional: Annoying background music (MIDI) - Uncomment if you dare -->
-        <!-- <embed src="YOUR_MIDI_URL_HERE.mid" autostart="true" loop="true" hidden="true"> -->
-        <!-- Example MIDI URL (may or may not work long term): https://www.vgmusic.com/music/console/nintendo/nes/smbtheme.mid -->
+         <div class="center"><img src="https://www.animatedimages.org/data/media/175/animated-skull-image-0016.gif" alt="Skull"></div>
 
     </div> <!-- End Container -->
+
+    <!-- Bottom Marquee -->
+     <marquee behavior="scroll" direction="right" scrollamount="12" style="background-color: black; color: lime; font-size: 22px; font-weight: bold; border: 2px dotted yellow; position: fixed; bottom: 0; width: 100%;">
+        PULA.GAY IS WATCHING YOU... VORTULON SEES ALL... HAVE YOU TRIED TURNING IT OFF AND ON AGAIN?... PULA... PULA... PULA... GAY... GAY... GAY...
+    </marquee>
+
+    <!-- Maybe add some horrible sound on click? (Requires JS) -->
+    <script>
+        // Optional: Play a sound on click somewhere - find a sound file URL
+        // document.body.addEventListener('click', () => {
+        //   new Audio('URL_TO_ANNOYING_SOUND.wav').play();
+        // });
+    </script>
 
 </body>
 </html>
